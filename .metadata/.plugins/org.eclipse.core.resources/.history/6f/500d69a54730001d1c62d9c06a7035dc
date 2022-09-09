@@ -1,0 +1,20 @@
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		LocalDate d04 = LocalDate.parse("2022-09-09");
+		LocalDateTime d05 = LocalDateTime.parse("2022-09-09T12:00:59");
+		Instant d06 = Instant.parse("2022-09-09T12:30:15Z");
+		
+		DateTimeFormatter fmt01 = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		
+		System.out.println("d04 = " + d04.format(fmt01));
+		System.out.println("d04 = " + fmt01.format(d04));
+	}
+
+}

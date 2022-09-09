@@ -1,0 +1,26 @@
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		LocalDate d01 = LocalDate.now();
+		LocalDateTime d02 = LocalDateTime.now();
+		Instant d03 = Instant.now();
+		LocalDate d04 = LocalDate.parse("2022-09-09");
+		LocalDateTime d05 = LocalDateTime.parse("2022-09-09T12:00:59");
+		Instant d06 = Instant.parse("2022-09-09T12:30:15Z");
+		Instant d07 = Instant.parse("2022-09-09T12:30:15-03:00");
+		
+		System.out.println("d01 = " + d01 + " - data local");
+		System.out.println("d02 = " + d02 + " - data e hora local");
+		System.out.println("d03 = " + d03 + " - data e hora Z(Londres)");
+		System.out.println("d04 = " + d04 + " - data local instanciada manualmente(parse)padrão ISO 8601");
+		System.out.println("d05 = " + d05 + " - data e hora local instanciada manualmente(parse) padrão ISO 8601");
+		System.out.println("d06 = " + d06 + " - data e hora Z(londres) instanciada manualmente padrão ISO 8601");
+		System.out.println("d07 = " + d07 + " - data e hora local convertida para Z(Londres) padrão ISO 8601");
+	}
+
+}

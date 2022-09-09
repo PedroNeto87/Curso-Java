@@ -1,0 +1,33 @@
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		LocalDate d04 = LocalDate.parse("2022-09-09");
+		LocalDateTime d05 = LocalDateTime.parse("2022-09-09T19:12:59");
+		Instant d06 = Instant.parse("2022-09-09T01:30:15Z");
+		
+		LocalDate pastWeekLocalDate = d04.minusWeeks(1);
+		LocalDate nextWeekLocalDate = d04.plusWeeks(1);
+		
+		System.out.println("pastWeekLocalDate = " + pastWeekLocalDate);
+		System.out.println("nextWeekLocalDate = " + nextWeekLocalDate);
+		
+		LocalDateTime pastWeekLocalDateTime = d05.minusWeeks(1);
+		LocalDateTime nextWeekLocalDateTime = d05.plusWeeks(1);
+		
+		System.out.println("pastWeekLocalDateTime = " + pastWeekLocalDateTime);
+		System.out.println("nextWeekLocalDateTime = " + nextWeekLocalDateTime);
+		
+		Instant pastWeekInstant = d06.minus(1, ChronoUnit.WEEKS);
+		Instant nextWeekInstant = d06.plus(1, ChronoUnit.WEEKS);
+		
+		System.out.println("pastWeekInstant = " + pastWeekInstant);
+		System.out.println("nextWeekInstant = " + nextWeekInstant);
+	}
+
+}
